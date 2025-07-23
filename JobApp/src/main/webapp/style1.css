@@ -1,0 +1,74 @@
+/* ==== Base Page Styling ==== */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0c3fc, #8ec5fc); /* soft trending gradient */
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==== Oval Card Container ==== */
+.oval-box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 60px 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* ==== Oval Box (Card) ==== */
+.oval-box {
+    background: linear-gradient(135deg, #667eea, #764ba2); /* Stylish purple/blue gradient */
+    width: 280px;
+    height: 180px;
+    border-radius: 50% / 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    cursor: pointer;
+    text-align: center;
+    padding: 20px;
+    color: #ffffff;
+    position: relative;
+}
+
+.oval-box:hover {
+    transform: scale(1.06) rotate(-2deg);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+/* ==== Card Content Styling ==== */
+.oval-box h3 {
+    font-size: 22px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.oval-box p {
+    font-size: 14px;
+    margin-top: 8px;
+    opacity: 0.9;
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 768px) {
+    .oval-box {
+        width: 90%;
+        height: 180px;
+        border-radius: 35% / 30%;
+    }
+
+    .oval-box-container {
+        padding: 20px;
+    }
+}

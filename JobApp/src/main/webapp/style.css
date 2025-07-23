@@ -1,0 +1,185 @@
+/* ==== Base Styling ==== */
+body {
+    background: linear-gradient(135deg, #1e96fc, #007bff);
+    color: #ffffff;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    transition: background 0.4s ease-in-out;
+}
+
+/* ==== Navbar ==== */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    padding: 10px 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 15px;
+    color: #ffffff !important;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* ==== Container ==== */
+.container {
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 16px;
+    padding: 40px 30px;
+    margin-top: 70px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    transition: all 0.4s ease;
+}
+
+/* ==== Custom Card Class ==== */
+.cdClass {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 25px;
+    color: #333;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.cdClass:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* ==== Optional Shine Effect ==== */
+.cdClass::after {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 70%);
+    pointer-events: none;
+    animation: shine 4s linear infinite;
+}
+
+@keyframes shine {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* ==== Scrollbar Styling ==== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* ==== Body & Global ==== */
+body {
+    background: linear-gradient(135deg, #1e96fc, #007bff);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* ==== Navbar ==== */
+.navbar {
+    background-color: rgba(255, 193, 7, 0.9); /* classy yellow glass */
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .navbar-brand {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333 !important;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff !important;
+}
+
+/* ==== Container Cards ==== */
+.container {
+    margin-top: 80px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.card-body {
+    padding: 40px 20px;
+}
+
+.card a.btn {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.card a.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 768px) {
+    .navbar .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .card-body {
+        padding: 30px 15px;
+    }
+
+    .card a.btn {
+        width: 100%;
+    }
+}
